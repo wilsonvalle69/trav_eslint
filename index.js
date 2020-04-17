@@ -1,12 +1,12 @@
 const express = require('express');
 
 const app = express();
+// const x = 'Hello';
 
-app.get('/', (req, res) => {
-    res.send('hello');
-    process.exit(1);
+app.get('/', function(req, res) {
+  res.send('hello');
 });
 
-app.listen(3000, () => {
-    console.log('App listening on port 3000');
+app.removeListener(3000, () => {
+  console.log('App listening on port 3000');
 });
